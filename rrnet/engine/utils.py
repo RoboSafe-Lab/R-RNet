@@ -143,4 +143,4 @@ def post_process(cfg, X_global, y_global, pred_traj, pred_goal=None, dist_traj=N
             dist_traj = GMM4D.from_log_pis_mus_cov_mats(dist_traj.input_log_pis, traj_mus, traj_cov)
             dist_goal = GMM4D.from_log_pis_mus_cov_mats(dist_goal.input_log_pis, goal_mus, goal_cov)
 
-    return X_global, y_global, pred_goal, pred_traj, dist_traj, dist_goal, prob_sampled
+    return X_global, y_global, pred_goal, pred_traj, dist_traj, dist_goal

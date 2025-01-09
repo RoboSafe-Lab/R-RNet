@@ -12,10 +12,10 @@ MODEL:
   LATENT_DIM: 32
   ATTENTION: True
   Ra: 0.1
-  Randomize: True
+  Randomize: False
   Random_num: 4
   Latent_sample_num_train: 20
-  Latent_sample_num_test: 20
+  Latent_sample_num_test: 20  #Re
 
   INPUT_LEN: 8
   PRED_LEN: 12 # input and pred_len is defined in 30FPS
@@ -32,7 +32,7 @@ MODEL:
   DEC_INPUT_SIZE: 256
   DEC_HIDDEN_SIZE: 256
 DATASET:
-  NAME: 'univ'
+  NAME: 'eth'
   ETH_CONFIG: 'configs/ETH_UCY.json'
   ROOT: 'data/ETH_UCY_trajectron/'
   TRAJECTORY_PATH: 'data/ETH_UCY_trajectron/trajectories/'
@@ -40,7 +40,7 @@ DATALOADER:
   NUM_WORKERS: 0
 SOLVER:
   # TRAIN_MODULE: 'FOL'
-  MAX_EPOCH: 50
+  MAX_EPOCH: 75
   BATCH_SIZE: 128
   LR: 0.001
   scheduler: 'exp'
